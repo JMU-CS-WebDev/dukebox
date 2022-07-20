@@ -1,4 +1,4 @@
-function Artists() {
+export function Artists() {
   return (
     <span className="Artists">
       THIS IS THE Artists PAGE

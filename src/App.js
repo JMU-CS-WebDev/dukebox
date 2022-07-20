@@ -1,6 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 import { Albums } from './Albums';
+import { Artists } from './Artists';
+import { Tracks } from './Tracks';
 
 const initialState = {
   artists: [
@@ -42,14 +44,15 @@ const initialState = {
 };
 
 function App() {
-  const albums = useState(initialState);
+  const albums = useState([{albumName:'df'}]);
 
   return (
     <div className="App">
       {
+        <Albums />
         albums.map(album =>
           <Albums
-            album={album}
+            album={album.albumName}
           />
         )
       }
